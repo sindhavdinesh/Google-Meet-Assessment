@@ -1,0 +1,16 @@
+{
+  "name": "google-meet-clone-assessment",
+  "version": "1.0.0",
+  "description": "Comprehensive Google Meet Clone Full-Stack Project (WebRTC & Socket.IO)",
+  "scripts": {
+    "install:all": "npm install --prefix server && npm install --prefix client",
+    "server": "npm run start --prefix server",
+    "client": "npm run dev --prefix client",
+    "build:client": "npm run build --prefix client",
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,green\" \"npm run server\" \"npm run client\"",
+    "start": "concurrently -n \"SERVER,CLIENT\" -c \"blue,green\" \"npm run server\" \"npm run client\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.4"
+  }
+}
